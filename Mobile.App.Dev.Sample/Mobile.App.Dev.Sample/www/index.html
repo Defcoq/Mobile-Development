@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <title>Mobile.App.Dev.Sample</title>
+
+    <!-- Mobile.App.Dev.Sample references -->
+    <link href="scripts/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+</head>  
+<body>
+    <div id="navbar"></div>
+
+
+     <div class="container body-content">
+    <h2>Track My Pace</h2>
+
+    <!-- user input form -->
+    <div class="row">
+      <div class="col-md-4">
+        <label class="control-label">Distance (miles): </label>
+        <input type="text" id="distance" class="form-control" />
+        <label class="control-label">Time (minutes): </label>
+        <input type="text" id="time" class="form-control" />
+        <button type="button" class="btn" id="btnCalc">calculate</button>
+      </div>
+    </div>
+
+    <div class="row col-md-4">
+
+      <!-- pace calculation results -->
+      <div id="paceDisplay" style="display: none;">
+        <hr />
+        <p><strong>Calculated pace (mins/mile):</strong></p>
+        <span class="pace" id="pace"></span>
+        <button type="button" class="btn btnSave" id="btnSave">save</button>
+      </div>
+
+      <!-- results log -->
+      <div id="logDisplay" style="display: none;">
+        <hr />
+        <p><strong>Pace log (date, dist, time, pace):</strong></p>
+        <ul id="logData"></ul>
+        <button type="button" class="btn" id="btnClear">clear</button>
+      </div>
+
+      <!-- the footer -->
+      <div id="footer"></div>
+
+    </div>
+
+  </div>
+
+
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+    <script src="scripts/lib/jquery/jquery.min.js"></script>
+    <script src="scripts/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

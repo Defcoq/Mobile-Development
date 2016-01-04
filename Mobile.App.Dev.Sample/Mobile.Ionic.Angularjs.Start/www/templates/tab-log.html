@@ -1,0 +1,17 @@
+﻿<ion-view view-title="My Run / My Ride - View Log">
+  <ion-content class="padding" ng-controller="LogCtrl">
+
+    <button type="button" ng-click="clear()"
+            class="button button-block button-calm">
+      clear log
+    </button>
+
+    <div class="list" ng-repeat="item in logItems">
+      <div class="item item-icon-left">
+        <p><i class="icon ion-ios-calendar"></i><span ng-bind="item.date"></span></p>
+        <p span ng-bind="item.data"></p>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

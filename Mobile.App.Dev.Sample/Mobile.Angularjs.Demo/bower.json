@@ -1,0 +1,6 @@
+{
+  "name": "Mobile.Angularjs.Demo",
+  "dependencies": {
+    "ionic": "driftyco/ionic-bower#master"
+  }
+}
